@@ -1,0 +1,17 @@
+{
+  "main": "wasm-api",
+  "scripts": {
+    "build:wasm": "node scripts/buildWebAssembly.js",
+    "test": "mocha ./test-js",
+    "pretty": "prettier --write \"wasm-api/**/*.js\" \"test-js/*.js\" \"scripts/**/*.js\"",
+    "benchmark": "node benchmark"
+  },
+  "author": "Jevan Chan <jevan.cnchan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "mocha": "^5.2.0",
+    "prettier": "^1.13.4",
+    "should": "^13.2.1"
+  }
+}
