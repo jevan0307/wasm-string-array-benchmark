@@ -3,7 +3,7 @@
   "scripts": {
     "build:wasm": "node scripts/buildWebAssembly.js",
     "test": "mocha ./test-js",
-    "pretty": "prettier --write \"wasm-api/**/*.js\" \"test-js/*.js\" \"scripts/**/*.js\"",
+    "pretty": "prettier --write \"benchmark/**/*.js\" \"wasm-api/**/*.js\" \"test-js/*.js\" \"scripts/**/*.js\"",
     "benchmark": "node benchmark"
   },
   "author": "Jevan Chan <jevan.cnchan@gmail.com>",
