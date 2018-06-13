@@ -17,5 +17,5 @@ String lentgh: 20
 | Method\Number of strings | 10000 | 100000 | 1000000 |
 | ------------------------ | ----- | ------ | ------- |
 | JSON string              | 8ms     | 114ms     | 1161ms    |
-| Intermediate Object (wasm-bindgen) | 16ms | 168ms | 1814ms |
+| Intermediate Object (wasm-bindgen) | 16ms | 173ms | 1760ms |
 | Array of [ptr, len] (wasm-bindgen/raw) |  | | |

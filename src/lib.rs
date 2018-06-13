@@ -55,6 +55,10 @@ impl StringVec {
     pub fn get_nth(&mut self, i: i32) -> String {
         self.val.get(i as usize).unwrap().clone()
     }
+
+    pub fn get_last(&mut self) -> String {
+        self.val.pop().unwrap()
+    }
 }
 
 impl StringVec {

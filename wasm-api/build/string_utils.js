@@ -123,6 +123,16 @@ class StringVec {
         wasm.__wbindgen_free(ptr, len * 1);
         return realRet;
     }
+    get_last() {
+        const retptr = globalArgumentPtr();
+        wasm.stringvec_get_last(retptr, this.ptr);
+        const mem = getUint32Memory();
+        const ptr = mem[retptr / 4];
+        const len = mem[retptr / 4 + 1];
+        const realRet = getStringFromWasm(ptr, len).slice();
+        wasm.__wbindgen_free(ptr, len * 1);
+        return realRet;
+    }
 }
 module.exports.StringVec = StringVec;
 

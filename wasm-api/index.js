@@ -20,8 +20,18 @@ function fromStringVec(svec) {
     return ret;
 }
 
+function fromStringVecConsumeLast(svec) {
+    let ret = [];
+    let len = svec.get_len();
+    for (let i = 0; i < len; i++) {
+        ret.push(svec.get_last());
+    }
+    svec.free();
+    return ret.reverse();
+}
+
 exports.stringSplit = function stringSplit(s) {
-    return fromStringVec(wasm.string_split(s));
+    return fromStringVecConsumeLast(wasm.string_split(s));
 };
 
 exports.stringSplitJson = function stringSplitJson(s) {
